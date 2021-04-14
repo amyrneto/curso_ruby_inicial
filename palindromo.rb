@@ -1,5 +1,13 @@
 def palindromo?(palavra)
-    palavra == palavra.reverse
+    reverse = String.new(palavra)
+    index = -1
+
+    for letter in palavra.chars
+        reverse[index] = letter
+        index -= 1
+    end
+
+    palavra == reverse
 end
 
 print "Entre com uma palavra: "
