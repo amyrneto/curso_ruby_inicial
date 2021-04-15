@@ -1,4 +1,8 @@
 class MinhaClasse
+    attr_accessor   :nome   # getter e setter
+    #attr_reader     :nome   # apenas getter
+    #attr_writer     :nome   # apenas setter
+    
     def initialize(nome)
         @nome = nome
     end
@@ -6,18 +10,9 @@ class MinhaClasse
     def imprimir_ola
         puts "Olá #{@nome}"
     end
-
-    def nome
-        @nome
-    end
-
-    def nome=(novo_nome)
-        @nome = novo_nome
-    end
-
 end
 
 objeto = MinhaClasse.new("Amyr")
 objeto.imprimir_ola
 objeto.nome = "teste"
-puts objeto.nome
+objeto.nome
